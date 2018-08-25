@@ -14,25 +14,7 @@
 
     <script src="socket.io/socket.io.js"></script>
 
-    <script>
-        var socket = io();
-
-        //Escuchar
-        socket.on('connect', function (client) {
-            console.log('Conectado al servidor');
-        });
-
-        //Escuchar
-        socket.on('disconnect', function () {
-            console.log('Conexión del servidor perdida');
-        });
-
-        //Envíar información
-        socket.emit('enviarMensaje', {
-            usuario: 'Pablo'
-        });
-
-    </script>
+    <script src = "./js/socket-custom.js"></script>
 
 </body>
 
