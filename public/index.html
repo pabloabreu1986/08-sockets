@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programa de Colas</title>
+</head>
+
+<body>
+    <h1>Programa de Colas</h1>
+    <!--poner una bolita verde cuando se conecte-->
+
+    <script src="socket.io/socket.io.js"></script>
+
+    <script>
+        var socket = io();
+
+        //Escuchar
+        socket.on('connect', function (client) {
+            console.log('Conectado al servidor');
+        });
+
+        //Escuchar
+        socket.on('disconnect', function () {
+            console.log('Conexión del servidor perdida');
+        });
+
+        //Envíar información
+        socket.emit('enviarMensaje', {
+            usuario: 'Pablo'
+        });
+
+    </script>
+
+</body>
+
+</html>
